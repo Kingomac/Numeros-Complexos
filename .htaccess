@@ -1,0 +1,6 @@
+DirectoryIndex /pages/index.php
+Options +FollowSymLinks
+RewriteEngine On
+RewriteRule ^inicio /pages/index.php
+RewriteRule ^galerias /pages/galeria.php
+RewriteRule ^curiosidades /pages/curiosidades.php
