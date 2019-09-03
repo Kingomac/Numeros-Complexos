@@ -1,6 +1,18 @@
 DirectoryIndex /pages/index.php
 Options +FollowSymLinks
 RewriteEngine On
+
+RewriteCond %{HTTPS} !on
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
 RewriteRule ^inicio /pages/index.php
 RewriteRule ^galerias /pages/galeria.php
 RewriteRule ^curiosidades /pages/curiosidades.php
+RewriteRule ^formacion-dun-cadrado /pages/curiosidades/formacion-dun-cadrado.php
+RewriteRule ^simetria-cadrantes /pages/curiosidades/simetria-cadrantes.php
+RewriteRule ^circulos /pages/curiosidades/circulos.php
+
+
+
+
+ErrorDocument 404 /pages/error/404.php
