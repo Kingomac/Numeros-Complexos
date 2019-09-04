@@ -6,13 +6,32 @@ RewriteCond %{HTTPS} !on
 RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
 
 RewriteRule ^inicio /pages/index.php
-RewriteRule ^galerias /pages/galeria.php
-RewriteRule ^curiosidades /pages/curiosidades.php
-RewriteRule ^formacion-dun-cadrado /pages/curiosidades/formacion-dun-cadrado.php
-RewriteRule ^simetria-cadrantes /pages/curiosidades/simetria-cadrantes.php
-RewriteRule ^circulos /pages/curiosidades/circulos.php
 
+###################################################################################################
+############    CURIOSIDADES                                    ###################################
+###################################################################################################
+RewriteRule ^curiosidades/formacion-dun-cadrado$ //pages/curiosidades/formacion-dun-cadrado.php [L]
+RewriteRule ^curiosidades/simetria-cadrantes$ //pages/curiosidades/simetria-cadrantes.php [L]
+RewriteRule ^curiosidades/circulos$ //pages/curiosidades/circulos.php [L]
+RewriteRule ^curiosidades$ //pages/curiosidades.php [L]
 
+###################################################################
+##############   Videos   #########################################
+###################################################################
+RewriteRule ^videos$ //pages/videos.php [L]
+RewriteRule ^videos/zoom-dunha-estrela$ //pages/videos/zoom-estrela.php [L]
+RewriteRule ^videos/zoom-do-buraco-negro$ //pages/videos/zoom-buraco-negro.php [L]
+RewriteRule ^videos/simetria-primeiro-cuarto-cadrante$ //pages/videos/simetria.php [L]
 
+##############################################################
+################# Galerias ###################################
+##############################################################
+RewriteRule ^galerias$ //pages/galerias.php [L]
+RewriteRule ^galerias/editada-hd$ //pages/galerias/1.php [L]
+
+##############################################################
+################# Realidade ###################################
+##############################################################
+RewriteRule ^realidade$ //pages/realidade.php [L]
 
 ErrorDocument 404 /pages/error/404.php

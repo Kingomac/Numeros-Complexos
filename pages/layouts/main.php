@@ -53,13 +53,13 @@
                     <a class="nav-link" href="/curiosidades">Curiosidades</a>
                 </li>
                 <li class="nav-item <?php echo $active[2] ?>">
-                    <a class="nav-link" href="videos.html">Vídeos</a>
+                    <a class="nav-link" href="/videos">Vídeos</a>
                 </li>
                 <li class="nav-item <?php echo $active[3] ?>">
                     <a class="nav-link" href="/galerias">Galerías</a>
                 </li>
                 <li class="nav-item <?php echo $active[4] ?>">
-                    <a class="nav-link" href="/galerias">Realidade</a>
+                    <a class="nav-link" href="/realidade">Realidade</a>
                 </li>
                 <li class="nav-item <?php echo $active[5] ?>">
                     <a class="nav-link" href="/galerias">Como facelo en Geogebra</a>
