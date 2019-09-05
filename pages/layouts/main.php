@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="gl">
+<html lang="es">
 
 <head>
     <!-- Required meta tags -->
@@ -33,12 +33,12 @@
     <script async defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script async defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
    
-    <title>Números complexos - <?php echo $title ?></title>
+    <title>Números complejos - <?php echo $title ?></title>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="/">Números complexos</a>
+        <a class="navbar-brand" href="/">Números complejos</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -59,10 +59,10 @@
                     <a class="nav-link" href="/galerias">Galerías</a>
                 </li>
                 <li class="nav-item <?php echo $active[4] ?>">
-                    <a class="nav-link" href="/realidade">Realidade</a>
+                    <a class="nav-link" href="/realidad">Realidad</a>
                 </li>
                 <li class="nav-item <?php echo $active[5] ?>">
-                    <a class="nav-link" href="/galerias">Como facelo en Geogebra</a>
+                    <a class="nav-link" href="/como-hacerlo-en-geogebra">Como hacerlo en Geogebra</a>
                 </li>
             </ul>
         </div>

@@ -1,37 +1,27 @@
 DirectoryIndex /pages/index.php
 Options +FollowSymLinks
 RewriteEngine On
-
+#Redirigir a HTTPS
 RewriteCond %{HTTPS} !on
 RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
-
-RewriteRule ^inicio /pages/index.php
-
-###################################################################################################
-############    CURIOSIDADES                                    ###################################
-###################################################################################################
-RewriteRule ^curiosidades/formacion-dun-cadrado$ //pages/curiosidades/formacion-dun-cadrado.php [L]
-RewriteRule ^curiosidades/simetria-cadrantes$ //pages/curiosidades/simetria-cadrantes.php [L]
+#Inicio
+RewriteRule ^inicio$ //pages/index.php
+#Curiosidades
+RewriteRule ^curiosidades/formacion-de-un-cuadrado$ //pages/curiosidades/formacion-cuadrado.php [L]
+RewriteRule ^curiosidades/simetria-cuadrantes$ //pages/curiosidades/simetria-cuadrantes.php [L]
 RewriteRule ^curiosidades/circulos$ //pages/curiosidades/circulos.php [L]
 RewriteRule ^curiosidades$ //pages/curiosidades.php [L]
-
-###################################################################
-##############   Videos   #########################################
-###################################################################
+#Videos
 RewriteRule ^videos$ //pages/videos.php [L]
-RewriteRule ^videos/zoom-dunha-estrela$ //pages/videos/zoom-estrela.php [L]
-RewriteRule ^videos/zoom-do-buraco-negro$ //pages/videos/zoom-buraco-negro.php [L]
-RewriteRule ^videos/simetria-primeiro-cuarto-cadrante$ //pages/videos/simetria.php [L]
-
-##############################################################
-################# Galerias ###################################
-##############################################################
+RewriteRule ^videos/zoom-de-una-estrella$ //pages/videos/zoom-estrella.php [L]
+RewriteRule ^videos/zoom-del-agujero-negro$ //pages/videos/zoom-agujero-negro.php [L]
+RewriteRule ^videos/simetria-primer-cuarto-cuadrante$ //pages/videos/simetria.php [L]
+#Galerias
 RewriteRule ^galerias$ //pages/galerias.php [L]
 RewriteRule ^galerias/editada-hd$ //pages/galerias/1.php [L]
-
-##############################################################
-################# Realidade ###################################
-##############################################################
-RewriteRule ^realidade$ //pages/realidade.php [L]
-
+#Realidade
+RewriteRule ^realidad$ //pages/realidad.php [L]
+#Como hacerlo en Geogebra
+RewriteRule ^como-hacerlo-en-geogebra$ //pages/tutorial.php [L]
+#Documentos de error
 ErrorDocument 404 /pages/error/404.php

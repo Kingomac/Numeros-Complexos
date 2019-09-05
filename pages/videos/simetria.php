@@ -1,5 +1,5 @@
 <?php
-$title = 'Simetría do primeiro e cuarto cadrante';
+$title = 'Simetría do primeiro e cuarto cuadrante';
 $active = array('','','active','','','');
 $content = file_get_contents('../views/videos/simetria.html');
 $meta = file_get_contents('../meta/videos/simetria.html');
