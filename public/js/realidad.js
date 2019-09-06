@@ -6,16 +6,16 @@ Vue.component('card', {
       <h5 class="card-title">{{title}}</h5>
       <div class="row text-center">
       <div class="col-md">
-      <img class="img-fluid rounded" :src="img1" :alt="title">
+      <img class="img-fluid rounded" :data-src="img1" :alt="title"/>
       </div>
       <div class="col-md">
-      <img class="img-fluid rounded" :src="img2" :alt="title">
+      <img class="img-fluid rounded" :data-src="img2"/>
       </div>
       </div>
     </div>
   </div>
     `,
-    props: ['title', 'href', 'color', 'img1', 'img2'],
+    props: ['title', 'href', 'color', 'img1', 'img2']
 });
 
 const app = new Vue({
@@ -27,5 +27,9 @@ const app = new Vue({
         color() {
             return this.posibleColors[Math.floor(Math.random() * this.posibleColors.length)];
         }
+    },
+    mounted: function() {
+        const observer = lozad('img');
+        observer.observe();
     }
 })

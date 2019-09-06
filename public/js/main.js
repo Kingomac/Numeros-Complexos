@@ -1,22 +1,21 @@
 requirejs.config({
     "paths": {
-        "jquery": "https://code.jquery.com/jquery-3.2.1.slim.min",
-        "popper": "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min",
-        "bootstrap": "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min",
-        "googleanalytics": "https://www.googletagmanager.com/gtag/js?id=UA-146721570-2",
+        "lozad": "https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min",
+        "jquery": "https://code.jquery.com/jquery-3.4.1.slim.min",
+        "bootstrap": "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min",
+        "googleanalytics": "https://www.googletagmanager.com/gtag/js?id=UA-146721570-2"
     },
     "shim": {
         "bootstrap": ["jquery"],
     }
 });
-
-require(["popper"], function(popper) {
-    // set popper as required by Bootstrap
-    window.Popper = popper;
-    require(["bootstrap"], function(bootstrap) {
-        // do nothing - just let Bootstrap initialise itself
-    });
+require(["lozad"], function(lozad) {
+    window.lozad = lozad;
+    const observer = lozad('img');
+    observer.observe();
 });
+require(["bootstrap"]);
+
 require(["googleanalytics"], function(googleanalytics) {
     window.dataLayer = window.dataLayer || [];
 

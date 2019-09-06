@@ -3,7 +3,6 @@
     $active = array('','','','active','','');
     $content = file_get_contents('./views/galerias.html');
     $meta = file_get_contents('./meta/galerias.html');
-    $importVue = true;
     $optionalJS = 'galerias.min';
     include('./layouts/main.php');
 ?>

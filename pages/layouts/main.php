@@ -1,8 +1,3 @@
-<?php
-session_cache_limiter('none');
-header("Cache-Control: public");
-header('Cache-control: max-age='.(60*60*24*365));
-?>
 <!doctype html>
 <html lang="es">
 
@@ -13,12 +8,10 @@ header('Cache-control: max-age='.(60*60*24*365));
     <?php echo $meta ?>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="../public/js/require.js" data-main="../public/js/main.min.js"></script>
+    <script src="../public/js/require.js" data-main="../public/js/main.js"></script>
     <?php if(isset($optionalJS)){
-        echo "<script>requirejs.config({paths:{vue:'https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min',optional:'". $optionalJS . "'},shim:{optional:['vue']}}),require(['vue'],function(e){window.Vue=e,require(['optional'],function(e){})});</script>";
-    }?>
-    
-   
+        echo "<script>requirejs.config({ paths: { vue: 'https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min', lozad: 'https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min' ,optional: '". $optionalJS . "' }, shim: { lozad:['vue'], optional: ['vue', 'lozad'] } }), require(['vue'], function(e) { window.Vue = e }),require(['lozad'],function(e){window.lozad = e; const observer = lozad(); observer.observe()}),require(['optional'],function(e){});</script>";
+    }?>   
     <title>Números complejos - <?php echo $title ?></title>
 </head>
 
@@ -57,7 +50,6 @@ header('Cache-control: max-age='.(60*60*24*365));
     <div class="container mt-3">
         <?php echo $content ?>
     </div>
-    
      </body>
 
 </html>

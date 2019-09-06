@@ -2,7 +2,7 @@ Vue.component('card', {
     template: //html
         `
     <div class="card col-md-3">
-        <img :src="preview" class="card-img-top" :alt="title">
+        <img :data-src="preview" class="card-img-top" :alt="title">
         <div class="card-body">
             <h5 class="card-title">{{title}}</h5>
             <p class="card-text">{{desc}}</p>
@@ -14,5 +14,9 @@ Vue.component('card', {
 })
 
 const app = new Vue({
-    el: '#card-group'
+    el: '#card-group',
+    mounted: function() {
+        const observer = lozad('img');
+        observer.observe();
+    }
 });
