@@ -13,11 +13,12 @@ RewriteRule ^videos$ //pages/videos.php [L]
 RewriteRule ^videos/zoom-de-una-estrella$ //pages/videos/zoom-estrella.php [L]
 RewriteRule ^videos/zoom-del-agujero-negro$ //pages/videos/zoom-agujero-negro.php [L]
 RewriteRule ^videos/simetria-primer-cuarto-cuadrante$ //pages/videos/simetria.php [L]
+RewriteRule ^videos/probando-figuras$ //pages/videos/probando-figuras.php [L]
 RewriteRule ^galerias$ //pages/galerias.php [L]
 RewriteRule ^galerias/editada-hd$ //pages/galerias/1.php [L]
 RewriteRule ^realidad$ //pages/realidad.php [L]
 RewriteRule ^como-hacerlo-en-geogebra$ //pages/tutorial.php [L]
 ErrorDocument 404 /pages/error/404.php
-<FilesMatch "\.(ico|webp||jpg|jpeg|png|gif|js|css|swf)$">
-Header set Cache-Control "max-age=172800, public"
-</FilesMatch>
+#<FilesMatch "\.(ico|webp||jpg|jpeg|png|gif|js|css|swf)$">
+#Header set Cache-Control "max-age=172800, public"
+#</FilesMatch>
