@@ -1,11 +1,8 @@
 <?php
+include('database.config.php');
 function publicarComentario($user, $password, $contenido, $video){
-    $servername = "localhost";
-    $dbusername = "root";
-    $dbpassword = "";
-    $dbname = "complejos";
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $dbusername, $dbpassword);
-    $sqli = new mysqli($servername, $dbusername, $dbpassword, $dbname);
+    $conn = new PDO(DB_PDO, DB_USER, DB_PASSWORD);
+    $sqli = new mysqli(SERVER, DB_USER, DB_PASSWORD, DB_NAME);
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $finalUser = $user;
@@ -21,7 +18,6 @@ function publicarComentario($user, $password, $contenido, $video){
                 }
             }
             if(!$foundUser){
-                $sqli = new mysqli($servername, $dbusername, $dbpassword, $dbname);
                 $hased_pass = password_hash($password, PASSWORD_BCRYPT);
                 $sqli->query("INSERT INTO usuarios (nombre, password) VALUES ('$user','$hased_pass')");
             }
@@ -35,5 +31,14 @@ function publicarComentario($user, $password, $contenido, $video){
     
     $conn = null;
     $sqli->close();
+}
+function leerComentarios($video){
+    $conn = new mysqli(SERVER, DB_USER, DB_PASSWORD, DB_NAME);
+    $result = $conn->query("SELECT contenido, usuario FROM comentarios WHERE video='$video'");
+    if($result->num_rows > 0){
+        while($row = $result->fetch_assoc()){
+            echo '<div class="card m-1 p-1"><h6 class="card-title">' . $row['usuario'] . '</h6><p class="card-text">' . $row['contenido'] .'</p></div>';
+        }
+    }
 }
 ?>
