@@ -18,7 +18,7 @@ $video = 'zoom-de-una-estrella';
         <div id="account" v-if="showUseAccount" class="card p-2">
             <small class="text-muted">Si no tienes una cuenta se creará automáticamente</small>
             <input name="nombre" class="form-control m-1" placeholder="Nombre de usuario">
-            <input name="password" class="form-control m-1" placeholder="Contraseña">
+            <input name="password" type="password" class="form-control m-1" placeholder="Contraseña">
         </div>
         <textarea name="contenido" class="form-control m-1 mt-2" placeholder="Escribe tu opinión sobre el vídeo"></textarea>
         <input name="submit" class="btn btn-primary m-1" type="submit" value="Comentar">
@@ -34,9 +34,11 @@ $video = 'zoom-de-una-estrella';
 if(isset($_POST['submit'])){
     if($_POST['nombre'] !== '' && $_POST['password'] !== ''){
     publicarComentario($_POST['nombre'], $_POST['password'], $_POST['contenido'], $video);
+    echo "<meta http-equiv='refresh' content='0'>";
     }
     else{
         publicarComentario(null, null, $_POST['contenido'], $video);
+        echo "<meta http-equiv='refresh' content='0'>";
     }
 }
 ?>
