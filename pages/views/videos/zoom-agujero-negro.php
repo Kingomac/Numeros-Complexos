@@ -1,13 +1,13 @@
 <?php
 include('../../controllers/comments.php');
-$video = 'zoom-de-una-estrella';
+$video = 'zoom-agujero-negro';
 ?>
-<h3>Zoom de una estrella</h3>
+<h1>Zoom del agujero negro</h1>
 <video class="embed-responsive" controls>
-        <source src="../resources/videos/zoom0.mp4">
-</video>
+        <source src="../resources/videos/zoom-buraco-negro.webm">
+    </video>
 <div id="app">
-    <videodesc value="Zoom de una estrella con puntos en coordenadas muy altas que no permiten ver la forma completa."></videodesc>
+    <videodesc value="Si aun no lo hiciste échale un vistazo a la sección de realidad."></videodesc>
     <div class="card mt-2">
     <div class="card-header">
     Comentarios

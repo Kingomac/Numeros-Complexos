@@ -47,9 +47,11 @@
         </div>
     </nav>
     <!-- Contido -->
-    <div class="container mt-3">
-        <?php echo $content ?>
-    </div>
+    <?php
+    if(isset($content)){
+        echo '<div class="container mt-3">' . $content . "</div>";
+    }
+    ?>
      </body>
 
 </html>

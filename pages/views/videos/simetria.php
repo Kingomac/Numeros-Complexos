@@ -1,13 +1,13 @@
 <?php
 include('../../controllers/comments.php');
-$video = 'zoom-de-una-estrella';
+$video = 'simetria';
 ?>
-<h3>Zoom de una estrella</h3>
+<h1>Simetría entre o primeiro e o cuarto cuadrante</h1>
 <video class="embed-responsive" controls>
-        <source src="../resources/videos/zoom0.mp4">
-</video>
+        <source src="../resources/videos/simetria-prim-cua-cuadrante.webm">
+    </video>
 <div id="app">
-    <videodesc value="Zoom de una estrella con puntos en coordenadas muy altas que no permiten ver la forma completa."></videodesc>
+    <videodesc value="Fíjate en como se mueve el punto y la simetría de las figuras al cambiar el cuadrante."></videodesc>
     <div class="card mt-2">
     <div class="card-header">
     Comentarios

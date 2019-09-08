@@ -1,13 +1,13 @@
 <?php
 include('../../controllers/comments.php');
-$video = 'zoom-de-una-estrella';
+$video = 'probando-figuras';
 ?>
-<h3>Zoom de una estrella</h3>
+<h1>Vídeo probando figuras</h1>
 <video class="embed-responsive" controls>
-        <source src="../resources/videos/zoom0.mp4">
+<source src="../resources/videos/parabolica.webm">
 </video>
 <div id="app">
-    <videodesc value="Zoom de una estrella con puntos en coordenadas muy altas que no permiten ver la forma completa."></videodesc>
+    <videodesc value="Aquí muestro como pueden variar las figuras al mover el punto por el plano complejo"></videodesc>
     <div class="card mt-2">
     <div class="card-header">
     Comentarios
