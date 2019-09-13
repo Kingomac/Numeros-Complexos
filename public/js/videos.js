@@ -2,11 +2,9 @@ Vue.component('card', {
     template: //html
         `
     <div class="card">
-        <img :data-src="preview" class="card-img-top" :alt="title">
+        <a :href="href"><img :data-src="preview" class="card-img-top" :alt="title"></a>
         <div class="card-body">
-            <a :href="href">
-                <h5 class="card-title">{{title}}</h5>
-            </a>
+            <a :href="href"><h5 class="card-title">{{title}}</h5></a>
             <p class="card-text">{{desc}}</p>
             <p class="card-text"><small class="text-muted">{{length}}</small></p>
         </div>

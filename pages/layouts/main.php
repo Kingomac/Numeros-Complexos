@@ -8,10 +8,7 @@
     <?php echo $meta ?>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="../public/js/require.js" data-main="../public/js/main.js"></script>
-    <?php if(isset($optionalJS)){
-        echo "<script>requirejs.config({ paths: { vue: 'https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min', lozad: 'https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min' ,optional: '". $optionalJS . "' }, shim: { lozad:['vue'], optional: ['vue', 'lozad'] } }), require(['vue'], function(e) { window.Vue = e }),require(['lozad'],function(e){window.lozad = e; const observer = lozad(); observer.observe()}),require(['optional'],function(e){});</script>";
-    }?>   
+    <script src="../public/js/require.js" data-main="../public/js/main.min.js"></script>
     <title>Números complejos - <?php echo $title ?></title>
 </head>
 
@@ -47,11 +44,13 @@
         </div>
     </nav>
     <!-- Contido -->
+    <div class="container my-3">
     <?php
     if(isset($content)){
-        echo '<div class="container mt-3">' . $content . "</div>";
+        echo $content;
     }
     ?>
+    </div>
      </body>
 
 </html>
